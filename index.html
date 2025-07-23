@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOREA - Préparation aux Concours</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP CDN pour les animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Polices élégantes */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Effet de parallaxe pour le fond */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1516321310766-47f7fd99ff4e?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        /* Style pour les cartes avec effet de survol */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        /* Bouton Google */
+        .google-btn {
+            background-color: #4285F4;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+        .google-btn:hover {
+            background-color: #3578e5;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Section Héros -->
+    <section class="hero-section h-screen flex flex-col justify-center items-center text-center text-white">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4 animate__fadeIn">🌟 Bienvenue sur LOREA</h1>
+        <p class="text-lg md:text-2xl mb-8 max-w-2xl animate__fadeIn" style="animation-delay: 0.5s;">
+            Votre plateforme ultime pour une préparation aux concours réussie et un apprentissage interactif.
+        </p>
+        <a href="#features" class="bg-white text-gray-800 py-3 px-6 rounded-full font-semibold text-lg hover:bg-gray-200 transition-all animate__fadeIn" style="animation-delay: 1s;">
+            Découvrir LOREA
+        </a>
+    </section>
+
+    <!-- Section Fonctionnalités -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Pourquoi choisir LOREA ?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Fonctionnalité 1 -->
+                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                    <i class="fa-solid fa-book-open text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Cours & Exercices</h3>
+                    <p class="text-gray-600">Accédez à des contenus pédagogiques interactifs de qualité pour maîtriser chaque sujet.</p>
+                </div>
+                <!-- Fonctionnalité 2 -->
+                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                    <i class="fa-solid fa-file-alt text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Évaluations Personnalisées</h3>
+                    <p class="text-gray-600">Participez à des tests adaptés à votre niveau pour optimiser votre préparation.</p>
+                </div>
+                <!-- Fonctionnalité 3 -->
+                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                    <i class="fa-solid fa-chart-line text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Suivi des Progrès</h3>
+                    <p class="text-gray-600">Suivez vos performances en temps réel pour identifier vos forces et vos faiblesses.</p>
+                </div>
+                <!-- Fonctionnalité 4 -->
+                <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
+                    <i class="fa-solid fa-chalkboard-teacher text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Enseignants Qualifiés</h3>
+                    <p class="text-gray-600">Interagissez avec des experts pour un accompagnement personnalisé.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">À Propos de LOREA</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop" alt="LOREA Vision" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        LOREA est une application éducative conçue pour faciliter l'accès à des contenus pédagogiques de qualité, la préparation aux concours et le suivi des performances des apprenants. Avec une interface intuitive et des outils innovants, nous aidons les étudiants à atteindre l'excellence académique.
+                    </p>
+                    <a href="#contact" class="mt-6 inline-block bg-blue-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-blue-700 transition-all">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Connexion Google -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12">Commencez dès maintenant</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                Connectez-vous en toute sécurité avec votre compte Google et accédez à une expérience d'apprentissage personnalisée.
+            </p>
+            <a href="#" class="google-btn">
+                <i class="fa-brands fa-google"></i> Se connecter avec Google
+            </a>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12">Nous Contacter</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                Vous avez des questions ou besoin d'assistance ? Contactez notre équipe pour un accompagnement personnalisé.
+            </p>
+            <a href="mailto:anicet.djampa@facsciences-uy1.cm" class="bg-white text-blue-600 py-3 px-6 rounded-full font-semibold hover:bg-gray-200 transition-all">
+                Envoyez-nous un message
+            </a>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg">© 2025 LOREA. Tous droits réservés.</p>
+            <div class="mt-4 flex justify-center gap-6">
+                <a href="#" class="hover:text-gray-300"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="#" class="hover:text-gray-300"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="#" class="hover:text-gray-300"><i class="fa-brands fa-twitter"></i> Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script GSAP pour les animations -->
+    <script>
+        // Animation du héros
+        gsap.from(".hero-section h1", { opacity: 0, y: 50, duration: 1, ease: "power3.out" });
+        gsap.from(".hero-section p", { opacity: 0, y: 50, duration: 1, delay: 0.5, ease: "power3.out" });
+        gsap.from(".hero-section a", { opacity: 0, y: 50, duration: 1, delay: 1, ease: "power3.out" });
+
+        // Animation des cartes
+        gsap.from(".card", {
+            scrollTrigger: {
+                trigger: ".card",
+                start: "top 80%",
+            },
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+
+        // Animation du bouton Google
+        gsap.from(".google-btn", {
+            scrollTrigger: {
+                trigger: ".google-btn",
+                start: "top 80%",
+            },
+            opacity: 0,
+            scale: 0.8,
+            duration: 1,
+            ease: "back.out(1.7)"
+        });
+    </script>
+</body>
+</html>
