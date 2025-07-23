@@ -12,18 +12,17 @@
     <!-- Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Polices élégantes et modernes */
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
 
         body {
             font-family: 'Roboto', sans-serif;
             overflow-x: hidden;
         }
+
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
         }
 
-        /* Héros avec dégradé dynamique et parallaxe */
         .hero-section {
             background: linear-gradient(135deg, rgba(0, 102, 204, 0.7), rgba(0, 153, 255, 0.4)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
@@ -31,16 +30,15 @@
             background-attachment: fixed;
         }
 
-        /* Style pour les cartes avec effet de survol */
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
-        /* Bouton WhatsApp */
         .whatsapp-btn {
             background-color: #25D366;
             color: white;
@@ -51,11 +49,11 @@
             border-radius: 50px;
             font-weight: 500;
         }
+
         .whatsapp-btn:hover {
             background-color: #20b358;
         }
 
-        /* Bouton Google */
         .google-btn {
             background-color: #4285F4;
             color: white;
@@ -66,16 +64,15 @@
             border-radius: 50px;
             font-weight: 500;
         }
+
         .google-btn:hover {
             background-color: #3578e5;
         }
 
-        /* Dégradé pour les sections */
         .gradient-bg {
             background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
         }
 
-        /* Animation pour les éléments décoratifs */
         .decorative-circle {
             position: absolute;
             border-radius: 50%;
@@ -85,7 +82,6 @@
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
-    <!-- Élément décoratif -->
     <div class="decorative-circle w-96 h-96 opacity-50 top-[-100px] left-[-100px]"></div>
     <div class="decorative-circle w-64 h-64 opacity-30 bottom-[-50px] right-[-50px]"></div>
 
@@ -105,25 +101,21 @@
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Pourquoi LOREA ?</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Fonctionnalité 1 -->
                 <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
                     <i class="fa-solid fa-book-open text-4xl text-blue-600 mb-4"></i>
                     <h3 class="text-2xl font-semibold mb-2">Cours & Exercices</h3>
                     <p class="text-gray-600">Accédez à des contenus pédagogiques interactifs pour exceller dans chaque matière.</p>
                 </div>
-                <!-- Fonctionnalité 2 -->
                 <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
                     <i class="fa-solid fa-file-alt text-4xl text-blue-600 mb-4"></i>
                     <h3 class="text-2xl font-semibold mb-2">Évaluations Personnalisées</h3>
                     <p class="text-gray-600">Tests adaptés à votre niveau pour optimiser votre préparation.</p>
                 </div>
-                <!-- Fonctionnalité 3 -->
                 <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
                     <i class="fa-solid fa-chart-line text-4xl text-blue-600 mb-4"></i>
                     <h3 class="text-2xl font-semibold mb-2">Suivi des Progrès</h3>
                     <p class="text-gray-600">Analysez vos performances en temps réel pour maximiser vos résultats.</p>
                 </div>
-                <!-- Fonctionnalité 4 -->
                 <div class="card bg-white rounded-lg shadow-lg p-6 text-center">
                     <i class="fa-solid fa-chalkboard-teacher text-4xl text-blue-600 mb-4"></i>
                     <h3 class="text-2xl font-semibold mb-2">Enseignants Qualifiés</h3>
@@ -186,25 +178,35 @@
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-6 text-center">
             <p class="text-lg">© 2025 LOREA. Tous droits réservés.</p>
-            <div class="mt-4 flex justify-center gap-6">
-                <a href="#" class="hover:text-gray-300"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                <a href="#" class="hover:text-gray-300"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a href="#" class="hover:text-gray-300"><i class="fa-brands fa-twitter"></i> Twitter</a>
+
+            <!-- Liens légaux -->
+            <div class="mt-4 flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-gray-300">
+                <a href="https://djampa123.github.io/lorea-privacy/" target="_blank" class="hover:underline hover:text-white">
+                    Politique de confidentialité
+                </a>
+                <span class="hidden md:inline">|</span>
+                <a href="https://djampa123.github.io/terms" target="_blank" class="hover:underline hover:text-white">
+                    Conditions d’utilisation
+                </a>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div class="mt-6 flex justify-center gap-6 text-xl">
+                <a href="#" class="hover:text-gray-300"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-gray-300"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-gray-300"><i class="fa-brands fa-twitter"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Script GSAP pour les animations -->
+    <!-- Animation GSAP -->
     <script>
-        // Enregistrer ScrollTrigger
         gsap.registerPlugin(ScrollTrigger);
 
-        // Animation du héros
         gsap.from(".hero-section h1", { opacity: 0, y: 50, duration: 1, ease: "power3.out" });
         gsap.from(".hero-section p", { opacity: 0, y: 50, duration: 1, delay: 0.5, ease: "power3.out" });
         gsap.from(".hero-section a", { opacity: 0, y: 50, duration: 1, delay: 1, ease: "power3.out" });
 
-        // Animation des cercles décoratifs
         gsap.to(".decorative-circle", {
             x: () => Math.random() * 100 - 50,
             y: () => Math.random() * 100 - 50,
@@ -214,7 +216,6 @@
             ease: "sine.inOut"
         });
 
-        // Animation des cartes
         gsap.from(".card", {
             scrollTrigger: {
                 trigger: ".card",
@@ -227,7 +228,6 @@
             ease: "power3.out"
         });
 
-        // Animation du bouton Google
         gsap.from(".google-btn", {
             scrollTrigger: {
                 trigger: ".google-btn",
@@ -239,7 +239,6 @@
             ease: "back.out(1.7)"
         });
 
-        // Animation des boutons de contact
         gsap.from(".whatsapp-btn, .bg-white.text-blue-600", {
             scrollTrigger: {
                 trigger: "#contact",
